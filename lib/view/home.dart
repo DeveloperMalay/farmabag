@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
             ),
             Tab(
               icon: Icon(Icons.person),
-              text: "Profile",
+              text: "Account",
             ),
             Tab(
               icon: Icon(Icons.shopping_cart),
