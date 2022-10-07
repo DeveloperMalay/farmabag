@@ -72,7 +72,7 @@ class CategoryCard extends StatelessWidget {
                 ),
                 Text(
                   "${currentItem['title']}",
-                  style: TextStyle(fontSize: 10),
+                  style: const TextStyle(fontSize: 10),
                 ),
               ],
             );
