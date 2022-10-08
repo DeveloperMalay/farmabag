@@ -11,23 +11,47 @@ class CartScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 18.0),
       child: Scaffold(
-        body: ListView(scrollDirection: Axis.vertical, children: [
-          const Center(
-            child: Text(
-              "Your cart",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 93, 90, 241),
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold),
+        appBar: AppBar(
+          toolbarHeight: 50,
+          backgroundColor: Colors.white,
+          elevation: 0,
+          automaticallyImplyLeading: false,
+          title: const Text(
+            "Your bag",
+            style: TextStyle(
+              color: Color.fromARGB(255, 93, 90, 241),
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(
-            height: 630,
-            width: 200,
-            child: CartCard(),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 14.0),
+              child: TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Edit Bag',
+                    style: TextStyle(color: Colors.black, fontSize: 15),
+                  )),
+            )
+          ],
+        ),
+        body: ListView(scrollDirection: Axis.vertical, children: [
+          const CartCard(),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: ListTile(
+              title: Text('Total'),
+              trailing: Text(
+                '\$50.98',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ),
           ),
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+            margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 0),
             width: 150,
             height: 50,
             child: CupertinoButton(
