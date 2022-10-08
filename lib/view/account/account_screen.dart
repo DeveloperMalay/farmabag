@@ -72,7 +72,7 @@ class AccountScreen extends StatelessWidget {
                   children: [
                     Image.network(
                       'https://img.freepik.com/free-vector/post-service-tracking-abstract-concept-vector-illustration-parcel-monitor-track-trace-your-shipment-package-tracking-number-express-delivery-online-shopping-mail-box-abstract-metaphor_335657-1777.jpg',
-                      height: 100,
+                      height: 80,
                     ),
                     const SizedBox(
                       width: 10,
@@ -82,7 +82,7 @@ class AccountScreen extends StatelessWidget {
                       children: const [
                         Text(
                           "Shipping & Tracking",
-                          style: TextStyle(color: Colors.black, fontSize: 20),
+                          style: TextStyle(color: Colors.black, fontSize: 18),
                         ),
                         Text(
                           "wfkhfiur reifjbrueibf \ni rifuierbf rufhreuf",
@@ -103,7 +103,7 @@ class AccountScreen extends StatelessWidget {
                   children: [
                     Image.network(
                       'https://img.freepik.com/free-vector/post-service-tracking-abstract-concept-vector-illustration-parcel-monitor-track-trace-your-shipment-package-tracking-number-express-delivery-online-shopping-mail-box-abstract-metaphor_335657-1777.jpg',
-                      height: 100,
+                      height: 80,
                     ),
                     const SizedBox(
                       width: 10,
@@ -113,7 +113,7 @@ class AccountScreen extends StatelessWidget {
                       children: const [
                         Text(
                           "Returns & Refunds",
-                          style: TextStyle(color: Colors.black, fontSize: 20),
+                          style: TextStyle(color: Colors.black, fontSize: 18),
                         ),
                         Text(
                           "wfkhfiur reifjbrueibf \ni rifuierbf rufhreuf",
@@ -134,7 +134,7 @@ class AccountScreen extends StatelessWidget {
                   children: [
                     Image.network(
                       'https://img.freepik.com/free-vector/post-service-tracking-abstract-concept-vector-illustration-parcel-monitor-track-trace-your-shipment-package-tracking-number-express-delivery-online-shopping-mail-box-abstract-metaphor_335657-1777.jpg',
-                      height: 100,
+                      height: 80,
                     ),
                     const SizedBox(
                       width: 10,
@@ -144,7 +144,7 @@ class AccountScreen extends StatelessWidget {
                       children: const [
                         Text(
                           "Login & Security",
-                          style: TextStyle(color: Colors.black, fontSize: 20),
+                          style: TextStyle(color: Colors.black, fontSize: 18),
                         ),
                         Text(
                           "wfkhfiur reifjbrueibf \ni rifuierbf rufhreuf",
@@ -165,7 +165,7 @@ class AccountScreen extends StatelessWidget {
                   children: [
                     Image.network(
                       'https://img.freepik.com/free-vector/post-service-tracking-abstract-concept-vector-illustration-parcel-monitor-track-trace-your-shipment-package-tracking-number-express-delivery-online-shopping-mail-box-abstract-metaphor_335657-1777.jpg',
-                      height: 100,
+                      height: 80,
                     ),
                     const SizedBox(
                       width: 10,
@@ -175,7 +175,7 @@ class AccountScreen extends StatelessWidget {
                       children: const [
                         Text(
                           "Buying & Selling",
-                          style: TextStyle(color: Colors.black, fontSize: 20),
+                          style: TextStyle(color: Colors.black, fontSize: 18),
                         ),
                         Text(
                           "wfkhfiur reifjbrueibf i \nrifuierbf rufhreuf",
@@ -196,7 +196,7 @@ class AccountScreen extends StatelessWidget {
                   children: [
                     Image.network(
                       'https://img.freepik.com/free-vector/post-service-tracking-abstract-concept-vector-illustration-parcel-monitor-track-trace-your-shipment-package-tracking-number-express-delivery-online-shopping-mail-box-abstract-metaphor_335657-1777.jpg',
-                      height: 100,
+                      height: 80,
                     ),
                     const SizedBox(
                       width: 10,
@@ -206,7 +206,7 @@ class AccountScreen extends StatelessWidget {
                       children: const [
                         Text(
                           "Shipping & Tracking",
-                          style: TextStyle(color: Colors.black, fontSize: 20),
+                          style: TextStyle(color: Colors.black, fontSize: 18),
                         ),
                         Text(
                           "wfkhfiur reifjbrueibf \ni rifuierbf rufhreuf",
@@ -227,7 +227,7 @@ class AccountScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 10,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 60.0),

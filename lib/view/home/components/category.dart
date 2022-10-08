@@ -54,8 +54,8 @@ class CategoryCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 100,
-                  width: 100,
+                  height: 90,
+                  width: 90,
                   padding: const EdgeInsets.all(10),
                   margin: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
@@ -65,14 +65,14 @@ class CategoryCard extends StatelessWidget {
                   child: Center(
                     child: Image.network(
                       "${currentItem['imageUrl']}",
-                      height: 60,
-                      width: 60,
+                      height: 50,
+                      width: 50,
                     ),
                   ),
                 ),
                 Text(
                   "${currentItem['title']}",
-                  style: const TextStyle(fontSize: 10),
+                  style: const TextStyle(fontSize: 15),
                 ),
               ],
             );
