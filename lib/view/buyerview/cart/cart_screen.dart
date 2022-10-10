@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'package:pharmabag/const/const.dart';
-import 'package:pharmabag/view/cart/components/cart_card.dart';
+import 'package:pharmabag/view/buyerview/cart/components/cart_card.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class CartScreen extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 50,
           backgroundColor: Colors.white,
-          elevation: 0,
+          elevation: 1,
           automaticallyImplyLeading: false,
           title: const Text(
             "Your bag",
@@ -24,20 +25,24 @@ class CartScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 14.0),
-              child: TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'Edit Bag',
-                    style: TextStyle(color: Colors.black, fontSize: 15),
-                  )),
-            )
-          ],
+          // actions: [
+          //   Padding(
+          //     padding: const EdgeInsets.only(bottom: 14.0),
+          //     child: TextButton(
+          //         onPressed: () {},
+          //         child: const Text(
+          //           'Edit Bag',
+          //           style: TextStyle(color: Colors.black, fontSize: 15),
+          //         )),
+          //   )
+          // ],
         ),
         body: ListView(scrollDirection: Axis.vertical, children: [
-          const CartCard(),
+          Container(
+              height: 560,
+              width: 200,
+              padding: const EdgeInsets.only(top: 18.0),
+              child: const CartCard()),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: ListTile(

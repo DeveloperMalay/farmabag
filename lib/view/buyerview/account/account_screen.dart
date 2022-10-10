@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pharmabag/view/buyerview/account/orderandtracking.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({Key? key}) : super(key: key);
@@ -12,7 +13,9 @@ class AccountScreen extends StatelessWidget {
           Container(
             color: const Color.fromARGB(255, 93, 90, 241),
             height: 200,
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 30,
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -65,36 +68,48 @@ class AccountScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Image.network(
-                      'https://img.freepik.com/free-vector/post-service-tracking-abstract-concept-vector-illustration-parcel-monitor-track-trace-your-shipment-package-tracking-number-express-delivery-online-shopping-mail-box-abstract-metaphor_335657-1777.jpg',
-                      height: 80,
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Shipping & Tracking",
-                          style: TextStyle(color: Colors.black, fontSize: 18),
-                        ),
-                        Text(
-                          "wfkhfiur reifjbrueibf \ni rifuierbf rufhreuf",
-                          style: TextStyle(color: Colors.grey, fontSize: 14),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    const Icon(Icons.arrow_forward_ios)
-                  ],
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const OrderandTracking();
+                    }));
+                  },
+                  child: Row(
+                    children: [
+                      Image.network(
+                        'https://img.freepik.com/free-vector/post-service-tracking-abstract-concept-vector-illustration-parcel-monitor-track-trace-your-shipment-package-tracking-number-express-delivery-online-shopping-mail-box-abstract-metaphor_335657-1777.jpg',
+                        height: 60,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            "My Order & Tracking",
+                            style: TextStyle(color: Colors.black, fontSize: 14),
+                          ),
+                          Text(
+                            "wfkhfiur reifjbrueibf \ni rifuierbf rufhreuf",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 95,
+                      ),
+                      const Icon(
+                        Icons.arrow_forward_ios,
+                        size: 16,
+                      )
+                    ],
+                  ),
                 ),
                 const Divider(
                   color: Colors.grey,
@@ -103,7 +118,7 @@ class AccountScreen extends StatelessWidget {
                   children: [
                     Image.network(
                       'https://img.freepik.com/free-vector/post-service-tracking-abstract-concept-vector-illustration-parcel-monitor-track-trace-your-shipment-package-tracking-number-express-delivery-online-shopping-mail-box-abstract-metaphor_335657-1777.jpg',
-                      height: 80,
+                      height: 60,
                     ),
                     const SizedBox(
                       width: 10,
@@ -113,18 +128,21 @@ class AccountScreen extends StatelessWidget {
                       children: const [
                         Text(
                           "Returns & Refunds",
-                          style: TextStyle(color: Colors.black, fontSize: 18),
+                          style: TextStyle(color: Colors.black, fontSize: 14),
                         ),
                         Text(
                           "wfkhfiur reifjbrueibf \ni rifuierbf rufhreuf",
-                          style: TextStyle(color: Colors.grey, fontSize: 14),
+                          style: TextStyle(color: Colors.grey, fontSize: 12),
                         ),
                       ],
                     ),
                     const SizedBox(
-                      width: 30,
+                      width: 100,
                     ),
-                    const Icon(Icons.arrow_forward_ios)
+                    const Icon(
+                      Icons.arrow_forward_ios,
+                      size: 16,
+                    )
                   ],
                 ),
                 const Divider(
@@ -134,7 +152,7 @@ class AccountScreen extends StatelessWidget {
                   children: [
                     Image.network(
                       'https://img.freepik.com/free-vector/post-service-tracking-abstract-concept-vector-illustration-parcel-monitor-track-trace-your-shipment-package-tracking-number-express-delivery-online-shopping-mail-box-abstract-metaphor_335657-1777.jpg',
-                      height: 80,
+                      height: 60,
                     ),
                     const SizedBox(
                       width: 10,
@@ -144,18 +162,21 @@ class AccountScreen extends StatelessWidget {
                       children: const [
                         Text(
                           "Login & Security",
-                          style: TextStyle(color: Colors.black, fontSize: 18),
+                          style: TextStyle(color: Colors.black, fontSize: 14),
                         ),
                         Text(
                           "wfkhfiur reifjbrueibf \ni rifuierbf rufhreuf",
-                          style: TextStyle(color: Colors.grey, fontSize: 14),
+                          style: TextStyle(color: Colors.grey, fontSize: 12),
                         ),
                       ],
                     ),
                     const SizedBox(
-                      width: 50,
+                      width: 110,
                     ),
-                    const Icon(Icons.arrow_forward_ios)
+                    const Icon(
+                      Icons.arrow_forward_ios,
+                      size: 16,
+                    )
                   ],
                 ),
                 const Divider(
@@ -165,7 +186,7 @@ class AccountScreen extends StatelessWidget {
                   children: [
                     Image.network(
                       'https://img.freepik.com/free-vector/post-service-tracking-abstract-concept-vector-illustration-parcel-monitor-track-trace-your-shipment-package-tracking-number-express-delivery-online-shopping-mail-box-abstract-metaphor_335657-1777.jpg',
-                      height: 80,
+                      height: 60,
                     ),
                     const SizedBox(
                       width: 10,
@@ -175,18 +196,21 @@ class AccountScreen extends StatelessWidget {
                       children: const [
                         Text(
                           "Buying & Selling",
-                          style: TextStyle(color: Colors.black, fontSize: 18),
+                          style: TextStyle(color: Colors.black, fontSize: 14),
                         ),
                         Text(
                           "wfkhfiur reifjbrueibf i \nrifuierbf rufhreuf",
-                          style: TextStyle(color: Colors.grey, fontSize: 14),
+                          style: TextStyle(color: Colors.grey, fontSize: 12),
                         ),
                       ],
                     ),
                     const SizedBox(
-                      width: 50,
+                      width: 105,
                     ),
-                    const Icon(Icons.arrow_forward_ios)
+                    const Icon(
+                      Icons.arrow_forward_ios,
+                      size: 16,
+                    )
                   ],
                 ),
                 const Divider(
@@ -196,7 +220,7 @@ class AccountScreen extends StatelessWidget {
                   children: [
                     Image.network(
                       'https://img.freepik.com/free-vector/post-service-tracking-abstract-concept-vector-illustration-parcel-monitor-track-trace-your-shipment-package-tracking-number-express-delivery-online-shopping-mail-box-abstract-metaphor_335657-1777.jpg',
-                      height: 80,
+                      height: 60,
                     ),
                     const SizedBox(
                       width: 10,
@@ -206,18 +230,21 @@ class AccountScreen extends StatelessWidget {
                       children: const [
                         Text(
                           "Shipping & Tracking",
-                          style: TextStyle(color: Colors.black, fontSize: 18),
+                          style: TextStyle(color: Colors.black, fontSize: 14),
                         ),
                         Text(
                           "wfkhfiur reifjbrueibf \ni rifuierbf rufhreuf",
-                          style: TextStyle(color: Colors.grey, fontSize: 14),
+                          style: TextStyle(color: Colors.grey, fontSize: 12),
                         ),
                       ],
                     ),
                     const SizedBox(
-                      width: 20,
+                      width: 95,
                     ),
-                    const Icon(Icons.arrow_forward_ios)
+                    const Icon(
+                      Icons.arrow_forward_ios,
+                      size: 16,
+                    )
                   ],
                 ),
                 const Divider(

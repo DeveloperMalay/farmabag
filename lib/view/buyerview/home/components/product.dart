@@ -136,7 +136,7 @@ class ProductCard extends StatelessWidget {
                           padding: const EdgeInsets.all(0),
                           color: const Color.fromARGB(255, 93, 90, 241),
                           child: Text(
-                            'Add to cart',
+                            'Add to Bag',
                             style: TextStyle(color: whiteColor),
                           ),
                           onPressed: () {},

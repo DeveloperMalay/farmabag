@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pharmabag/const/const.dart';
-import 'package:pharmabag/view/home.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);

@@ -1,8 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SellerScreen extends StatelessWidget {
+class SellerScreen extends StatefulWidget {
   const SellerScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SellerScreen> createState() => _SellerScreenState();
+}
+
+class _SellerScreenState extends State<SellerScreen> {
+  bool value = false;
 
   @override
   Widget build(BuildContext context) {
@@ -247,7 +254,14 @@ class SellerScreen extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Checkbox(value: false, onChanged: (v) {}),
+                  Checkbox(
+                    value: value,
+                    onChanged: (value) {
+                      setState(() {
+                        value = value;
+                      });
+                    },
+                  ),
                   const Text(
                     "I verify that all the above details are true in my knowledge.",
                     style: TextStyle(

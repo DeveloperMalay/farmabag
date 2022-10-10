@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pharmabag/utils/custom_theme.dart';
-import 'package:pharmabag/view/signup/signup_screen.dart';
+import 'package:pharmabag/view/buyerview/signup/signup_screen.dart';
 
 void main() {
   runApp(const MyApp());

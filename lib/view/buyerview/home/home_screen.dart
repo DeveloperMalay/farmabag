@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'package:pharmabag/const/const.dart';
-import 'package:pharmabag/view/home/components/category.dart';
-import 'package:pharmabag/view/home/components/product.dart';
+import 'package:pharmabag/view/buyerview/home/components/category.dart';
+import 'package:pharmabag/view/buyerview/home/components/product.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -36,27 +37,30 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 118.0),
+                  padding: const EdgeInsets.only(left: 92.0),
                   child: SizedBox(
                     height: 60,
-                    width: 100,
+                    width: 130,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
-                        Icon(
-                          Icons.monetization_on_outlined,
-                          size: 30,
-                          color: Color.fromARGB(255, 93, 90, 241),
+                        CircleAvatar(
+                          radius: 25,
+                          backgroundColor: Color.fromARGB(255, 227, 227, 255),
+                          child: Icon(
+                            Icons.favorite_outline,
+                            size: 30,
+                            color: Color.fromARGB(255, 93, 90, 241),
+                          ),
                         ),
-                        Icon(
-                          Icons.favorite_outline,
-                          size: 30,
-                          color: Color.fromARGB(255, 93, 90, 241),
-                        ),
-                        Icon(
-                          Icons.notifications_outlined,
-                          size: 30,
-                          color: Color.fromARGB(255, 93, 90, 241),
+                        CircleAvatar(
+                          radius: 25,
+                          backgroundColor: Color.fromARGB(255, 227, 227, 255),
+                          child: Icon(
+                            Icons.notifications_outlined,
+                            size: 30,
+                            color: Color.fromARGB(255, 93, 90, 241),
+                          ),
                         ),
                       ],
                     ),
@@ -68,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: SizedBox(
                 width: 200,
-                height: 60,
+                height: 50,
                 child: Row(
                   children: [
                     const Expanded(
@@ -90,8 +94,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                                color: Color.fromARGB(255, 93, 90, 241),
-                                width: 1.0),
+                              color: Color.fromARGB(255, 93, 90, 241),
+                              width: 1.0,
+                            ),
                           ),
                           suffixIcon: Icon(
                             Icons.camera_enhance,
@@ -167,22 +172,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: greyColor,
                         fontSize: 20,
                       ),
-                    ),
-                    Row(
-                      children: const [
-                        Text(
-                          'See all',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 93, 90, 241),
-                            fontSize: 15,
-                          ),
-                        ),
-                        Icon(
-                          Icons.arrow_forward,
-                          size: 20,
-                          color: Color.fromARGB(255, 93, 90, 241),
-                        )
-                      ],
                     ),
                   ]),
             ),

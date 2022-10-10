@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pharmabag/const/const.dart';
-import 'package:pharmabag/view/account/account_screen.dart';
-import 'package:pharmabag/view/cart/cart_screen.dart';
-import 'package:pharmabag/view/help/help_screen.dart';
-import 'package:pharmabag/view/home/home_screen.dart';
+import 'package:pharmabag/view/buyerview/account/account_screen.dart';
+import 'package:pharmabag/view/buyerview/allcategory/allcategory_screen.dart';
+import 'package:pharmabag/view/buyerview/cart/cart_screen.dart';
+import 'package:pharmabag/view/buyerview/home/home_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -36,22 +36,22 @@ class _HomeState extends State<Home> {
               text: "Home",
             ),
             Tab(
-              icon: Icon(Icons.help),
-              text: "Help",
+              icon: Icon(Icons.category_rounded),
+              text: "Category",
             ),
             Tab(
               icon: Icon(Icons.person),
               text: "Account",
             ),
             Tab(
-              icon: Icon(Icons.shopping_cart),
-              text: "Cart",
+              icon: Icon(Icons.shopping_bag),
+              text: "Bag",
             ),
           ]),
         ),
         body: const TabBarView(children: [
           HomeScreen(),
-          HelpScreen(),
+          Allcategory(),
           AccountScreen(),
           CartScreen()
         ]),
