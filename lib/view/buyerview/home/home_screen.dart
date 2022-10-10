@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:pharmabag/const/const.dart';
+import 'package:pharmabag/view/buyerview/home/components/allproducts.dart';
 import 'package:pharmabag/view/buyerview/home/components/category.dart';
 import 'package:pharmabag/view/buyerview/home/components/product.dart';
 
@@ -189,15 +190,23 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     Row(
-                      children: const [
-                        Text(
-                          'See all',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 93, 90, 241),
-                            fontSize: 15,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return const AllProducts();
+                            }));
+                          },
+                          child: const Text(
+                            'See all',
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 93, 90, 241),
+                              fontSize: 15,
+                            ),
                           ),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.arrow_forward,
                           size: 20,
                           color: Color.fromARGB(255, 93, 90, 241),
