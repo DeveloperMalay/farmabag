@@ -68,7 +68,7 @@ class SellerLoginCallBack {
             } else {
               Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) {
-                return SignIn();
+                return const SignIn();
               }));
             }
           } else {
@@ -76,7 +76,7 @@ class SellerLoginCallBack {
                 context: context, message: "Session Expire", isWarning: true);
             Navigator.pushReplacement(context,
                 MaterialPageRoute(builder: (context) {
-              return SignUpScreen();
+              return const SignUpScreen();
             }));
           }
         } else {

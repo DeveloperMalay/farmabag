@@ -1,30 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:loader_overlay/loader_overlay.dart';
+import 'package:pharmabag/query/seller/product/get_user_product_by_search.dart';
+import 'package:pharmabag/query/seller/product/get_user_products.dart';
 
 class StockProvider extends ChangeNotifier {
-  // GetProductsModel? dsValue;
-  // List<ResultProducts>? products = [];
+  GetProductsModel? dsValue;
+  List<ResultProducts>? products = [];
 
-  // getStockProvider(BuildContext context) {
-  //   context.loaderOverlay.show();
+  getStockProvider(BuildContext context) {
+    context.loaderOverlay.show();
 
-  //   getProductMethod(context).then((value) {
-  //     dsValue = value;
+    getProductMethod(context).then((value) {
+      dsValue = value;
 
-  //     products = value!.resultProducts;
-  //     context.loaderOverlay.hide();
+      products = value!.resultProducts;
+      context.loaderOverlay.hide();
 
-  //     notifyListeners();
-  //   });
-  // }
+      notifyListeners();
+    });
+  }
 
-  // searchStock(context, String q) {
-  //   getProductSearchMethod(context, q: q).then((value) {
-  //     dsValue = value;
-  //     // products = value;
+  searchStock(context, String q) {
+    getProductSearchMethod(context, q: q).then((value) {
+      dsValue = value;
+      // products = value;
 
-  //     notifyListeners();
-  //   });
-  //   // notifyListeners();
-  // }
+      notifyListeners();
+    });
+    // notifyListeners();
+  }
 }

@@ -31,25 +31,25 @@ class GetBuyerDetails {
     status = json['status'];
     message = json['message'];
     buyerUser = json['buyer_user'] != null
-        ? new BuyerUser.fromJson(json['buyer_user'])
+        ? BuyerUser.fromJson(json['buyer_user'])
         : null;
     buyerDetails = json['buyer_details'] != null
-        ? new BuyerDetails.fromJson(json['buyer_details'])
+        ? BuyerDetails.fromJson(json['buyer_details'])
         : null;
     isAccountFound = json['is_account_found'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['status'] = this.status;
-    data['message'] = this.message;
-    if (this.buyerUser != null) {
-      data['buyer_user'] = this.buyerUser!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['status'] = status;
+    data['message'] = message;
+    if (buyerUser != null) {
+      data['buyer_user'] = buyerUser!.toJson();
     }
-    if (this.buyerDetails != null) {
-      data['buyer_details'] = this.buyerDetails!.toJson();
+    if (buyerDetails != null) {
+      data['buyer_details'] = buyerDetails!.toJson();
     }
-    data['is_account_found'] = this.isAccountFound;
+    data['is_account_found'] = isAccountFound;
     return data;
   }
 }
@@ -89,16 +89,16 @@ class BuyerUser {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['_id'] = this.sId;
-    data['phone_no'] = this.phoneNo;
-    data['password'] = this.password;
-    data['expire_password'] = this.expirePassword;
-    data['date_time'] = this.dateTime;
-    data['message'] = this.message;
-    data['is_user_block'] = this.isUserBlock;
-    data['status'] = this.status;
-    data['__v'] = this.iV;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['_id'] = sId;
+    data['phone_no'] = phoneNo;
+    data['password'] = password;
+    data['expire_password'] = expirePassword;
+    data['date_time'] = dateTime;
+    data['message'] = message;
+    data['is_user_block'] = isUserBlock;
+    data['status'] = status;
+    data['__v'] = iV;
     return data;
   }
 }
@@ -144,14 +144,14 @@ class BuyerDetails {
     email = json['email'];
     legalName = json['legal_name'];
     bankAccount = json['bank_account'] != null
-        ? new BankAccount.fromJson(json['bank_account'])
+        ? BankAccount.fromJson(json['bank_account'])
         : null;
     licence =
-        json['licence'] != null ? new Licence.fromJson(json['licence']) : null;
+        json['licence'] != null ? Licence.fromJson(json['licence']) : null;
     address =
-        json['address'] != null ? new Address.fromJson(json['address']) : null;
+        json['address'] != null ? Address.fromJson(json['address']) : null;
     gstPanResponse = json['gst_pan_response'] != null
-        ? new GstPanResponse.fromJson(json['gst_pan_response'])
+        ? GstPanResponse.fromJson(json['gst_pan_response'])
         : null;
     phoneNo = json['phone_no'];
     inviteCode = json['invite_code'];
@@ -162,30 +162,30 @@ class BuyerDetails {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['_id'] = this.sId;
-    data['buyer_id'] = this.buyerId;
-    data['name'] = this.name;
-    data['email'] = this.email;
-    data['legal_name'] = this.legalName;
-    if (this.bankAccount != null) {
-      data['bank_account'] = this.bankAccount!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['_id'] = sId;
+    data['buyer_id'] = buyerId;
+    data['name'] = name;
+    data['email'] = email;
+    data['legal_name'] = legalName;
+    if (bankAccount != null) {
+      data['bank_account'] = bankAccount!.toJson();
     }
-    if (this.licence != null) {
-      data['licence'] = this.licence!.toJson();
+    if (licence != null) {
+      data['licence'] = licence!.toJson();
     }
-    if (this.address != null) {
-      data['address'] = this.address!.toJson();
+    if (address != null) {
+      data['address'] = address!.toJson();
     }
-    if (this.gstPanResponse != null) {
-      data['gst_pan_response'] = this.gstPanResponse!.toJson();
+    if (gstPanResponse != null) {
+      data['gst_pan_response'] = gstPanResponse!.toJson();
     }
-    data['phone_no'] = this.phoneNo;
-    data['invite_code'] = this.inviteCode;
-    data['date'] = this.date;
-    data['status'] = this.status;
-    data['buyer_number_id'] = this.buyerNumberId;
-    data['__v'] = this.iV;
+    data['phone_no'] = phoneNo;
+    data['invite_code'] = inviteCode;
+    data['date'] = date;
+    data['status'] = status;
+    data['buyer_number_id'] = buyerNumberId;
+    data['__v'] = iV;
     return data;
   }
 }
@@ -206,11 +206,11 @@ class BankAccount {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['name'] = this.name;
-    data['bank_name'] = this.bankName;
-    data['account_number'] = this.accountNumber;
-    data['ifsc_code'] = this.ifscCode;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['name'] = name;
+    data['bank_name'] = bankName;
+    data['account_number'] = accountNumber;
+    data['ifsc_code'] = ifscCode;
     return data;
   }
 }
@@ -227,9 +227,9 @@ class Licence {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['lic20'] = this.lic20;
-    data['lic21'] = this.lic21;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['lic20'] = lic20;
+    data['lic21'] = lic21;
     return data;
   }
 }
@@ -260,13 +260,13 @@ class Address {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['name'] = this.name;
-    data['address1'] = this.address1;
-    data['address2'] = this.address2;
-    data['state'] = this.state;
-    data['city'] = this.city;
-    data['pincode'] = this.pincode;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['name'] = name;
+    data['address1'] = address1;
+    data['address2'] = address2;
+    data['state'] = state;
+    data['city'] = city;
+    data['pincode'] = pincode;
     return data;
   }
 }
@@ -295,18 +295,18 @@ class GstPanResponse {
     natureOfBusinessActivity =
         json['nature_of_business_activity'].cast<String>();
     address =
-        json['address'] != null ? new Address.fromJson(json['address']) : null;
+        json['address'] != null ? Address.fromJson(json['address']) : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['status'] = this.status;
-    data['message'] = this.message;
-    data['legal_name'] = this.legalName;
-    data['gst_number'] = this.gstNumber;
-    data['nature_of_business_activity'] = this.natureOfBusinessActivity;
-    if (this.address != null) {
-      data['address'] = this.address!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['status'] = status;
+    data['message'] = message;
+    data['legal_name'] = legalName;
+    data['gst_number'] = gstNumber;
+    data['nature_of_business_activity'] = natureOfBusinessActivity;
+    if (address != null) {
+      data['address'] = address!.toJson();
     }
     return data;
   }
@@ -353,18 +353,18 @@ class BuyerAddress {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['building_name'] = this.buildingName;
-    data['city'] = this.city;
-    data['door_number'] = this.doorNumber;
-    data['dst'] = this.dst;
-    data['floor_number'] = this.floorNumber;
-    data['latitude'] = this.latitude;
-    data['location'] = this.location;
-    data['longitude'] = this.longitude;
-    data['pincode'] = this.pincode;
-    data['state_name'] = this.stateName;
-    data['street'] = this.street;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['building_name'] = buildingName;
+    data['city'] = city;
+    data['door_number'] = doorNumber;
+    data['dst'] = dst;
+    data['floor_number'] = floorNumber;
+    data['latitude'] = latitude;
+    data['location'] = location;
+    data['longitude'] = longitude;
+    data['pincode'] = pincode;
+    data['state_name'] = stateName;
+    data['street'] = street;
     return data;
   }
 }

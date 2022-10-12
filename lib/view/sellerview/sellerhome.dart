@@ -3,6 +3,7 @@ import 'package:ionicons/ionicons.dart';
 import 'package:pharmabag/const/const.dart';
 import 'package:pharmabag/provider/home.dart';
 import 'package:pharmabag/utils/custom_theme.dart';
+import 'package:pharmabag/view/sellerview/addstock/add_stock.dart';
 import 'package:pharmabag/view/sellerview/home/home_screen.dart';
 import 'package:pharmabag/view/sellerview/order/order.dart';
 import 'package:pharmabag/view/sellerview/settlements/settlements.dart';
@@ -30,10 +31,10 @@ class _SHomeState extends State<SHome> {
                   ? const OrderTab()
                   : HomeProviderCallBack(context).listener.selectedScreen ==
                           "Stocks"
-                      ? const AddStock()
+                      ? const StockTab()
                       : HomeProviderCallBack(context).listener.selectedScreen ==
                               "Add Stock"
-                          ? const AddStock()
+                          ? AddStock()
                           : Container(),
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
@@ -41,7 +42,7 @@ class _SHomeState extends State<SHome> {
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(
             builder: (context) {
-              return const AddStock();
+              return AddStock();
             },
           ));
         },

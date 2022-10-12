@@ -77,6 +77,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Future.delayed(const Duration(seconds: 3)).then((value) async {
       const SHome();
+
       // await SellerLoginCallBack.onChechkingAccount(context);
     });
     super.initState();

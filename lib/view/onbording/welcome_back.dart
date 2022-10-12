@@ -15,7 +15,7 @@ class WeicomeBackPage extends StatelessWidget {
           icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => WelcomePage()));
+                MaterialPageRoute(builder: (context) => const WelcomePage()));
           },
         ),
       ),
