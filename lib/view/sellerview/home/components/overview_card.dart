@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pharmabag/const/const.dart';
+import 'package:pharmabag/utils/custom_theme.dart';
 
 class OverViewCard extends StatelessWidget {
   final IconData icon;
@@ -38,27 +39,27 @@ class OverViewCard extends StatelessWidget {
                 radius: 22,
                 child: Icon(icon, color: color, size: 22),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Text(
                 value,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 3,
               ),
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
-                    color: primaryColor),
+                    color: CustomTheme.violet),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Text(

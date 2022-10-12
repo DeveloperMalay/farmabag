@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:loader_overlay/loader_overlay.dart';
+import 'package:pharmabag/provider/add_stock.dart';
+import 'package:pharmabag/provider/buyer.dart';
+import 'package:pharmabag/provider/home.dart';
+import 'package:pharmabag/provider/product_search.dart';
+import 'package:pharmabag/provider/seller.dart';
+import 'package:pharmabag/provider/stock.dart';
 import 'package:pharmabag/utils/custom_theme.dart';
 import 'package:pharmabag/view/authenticationview/signup/signup_screen.dart';
 import 'package:pharmabag/view/sellerview/sellerhome.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -18,11 +26,41 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: CustomTheme.getTheme(),
-      home: const SignUpScreen(),
+    return GlobalLoaderOverlay(
+      overlayWidget: const Center(
+        child: CircularProgressIndicator(),
+      ),
+      overlayColor: Colors.white,
+      overlayOpacity: 1,
+      child: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (context) {
+            return HomeProvider();
+          }),
+          ChangeNotifierProvider(create: (context) {
+            return AddStockProvider();
+          }),
+          ChangeNotifierProvider(create: (context) {
+            return StockProvider();
+          }),
+          ChangeNotifierProvider(create: (context) {
+            return BuyerProductProvider();
+          }),
+          ChangeNotifierProvider(create: (context) {
+            return BuyerProductProvider();
+          }),
+          ChangeNotifierProvider(create: (context) {
+            return SellerProvider();
+          }),
+          ChangeNotifierProvider(create: (context) {
+            return BuyerProvider();
+          })
+        ],
+        child: MaterialApp(
+            theme: CustomTheme.getTheme(),
+            debugShowCheckedModeBanner: false,
+            home: const SHome()),
+      ),
     );
   }
 }

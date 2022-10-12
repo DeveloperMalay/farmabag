@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-Color primaryColor = const Color.fromARGB(1, 87, 105, 247);
+const baseUrl = "http://52.66.210.238:3000";
+Color primaryColor = const Color(0xFF5467ED);
 Color seconderyColor = const Color.fromARGB(1, 237, 220, 255);
 Color greenColor = Colors.green;
 Color redColor = Colors.red;

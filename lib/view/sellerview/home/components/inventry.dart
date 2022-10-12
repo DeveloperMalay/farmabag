@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pharmabag/const/const.dart';
+import 'package:pharmabag/utils/custom_theme.dart';
 
 class HomeInventoryCard extends StatelessWidget {
   const HomeInventoryCard({Key? key}) : super(key: key);
@@ -37,7 +38,7 @@ class HomeInventoryCard extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,
-                                  color: primaryColor),
+                                  color: CustomTheme.violet),
                             ),
                             Text(
                               "Manufactured by Sun Pharma",
@@ -62,7 +63,7 @@ class HomeInventoryCard extends StatelessWidget {
                           Text("MRP",
                               style: TextStyle(
                                   fontSize: 10,
-                                  color: primaryColor,
+                                  color: CustomTheme.violet,
                                   fontWeight: FontWeight.w400)),
                           const SizedBox(height: 5),
                           const Text("₹67.18",
@@ -76,7 +77,7 @@ class HomeInventoryCard extends StatelessWidget {
                         Text("PRC",
                             style: TextStyle(
                                 fontSize: 10,
-                                color: primaryColor,
+                                color: CustomTheme.violet,
                                 fontWeight: FontWeight.w400)),
                         const SizedBox(height: 8),
                         const Text("₹27.18",
@@ -89,7 +90,7 @@ class HomeInventoryCard extends StatelessWidget {
                         Text("Units remaining",
                             style: TextStyle(
                                 fontSize: 10,
-                                color: primaryColor,
+                                color: CustomTheme.violet,
                                 fontWeight: FontWeight.w400)),
                         const SizedBox(height: 8),
                         const Text("2000",
@@ -102,7 +103,7 @@ class HomeInventoryCard extends StatelessWidget {
                         Text("Total sale value",
                             style: TextStyle(
                                 fontSize: 10,
-                                color: primaryColor,
+                                color: CustomTheme.violet,
                                 fontWeight: FontWeight.w400)),
                         const SizedBox(height: 8),
                         const Text("15000",

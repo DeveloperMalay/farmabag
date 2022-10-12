@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class CustomTheme {
   static const Color grey = Color(0xffdFDFDF);
-  static const Color violet = Color.fromARGB(255, 53, 43, 129);
+  // static const Color violet = Color.fromARGB(255, 53, 43, 129);
+  static const Color violet = Color(0xFF5467ED);
   static const Color lightViolet = Color.fromARGB(255, 181, 173, 240);
   static const cardShadow = [
     BoxShadow(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:pharmabag/const/const.dart';
 import 'package:pharmabag/provider/home.dart';
+import 'package:pharmabag/utils/custom_theme.dart';
 import 'package:pharmabag/view/sellerview/home/home_screen.dart';
 import 'package:pharmabag/view/sellerview/order/order.dart';
 import 'package:pharmabag/view/sellerview/settlements/settlements.dart';
@@ -32,15 +33,15 @@ class _SHomeState extends State<SHome> {
                       ? const AddStock()
                       : HomeProviderCallBack(context).listener.selectedScreen ==
                               "Add Stock"
-                          ? AddStock()
+                          ? const AddStock()
                           : Container(),
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: primaryColor,
+        backgroundColor: CustomTheme.violet,
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(
             builder: (context) {
-              return AddStock();
+              return const AddStock();
             },
           ));
         },
@@ -49,7 +50,7 @@ class _SHomeState extends State<SHome> {
       bottomNavigationBar: FABBottomAppBar(
         centerItemText: 'Add Stock',
         color: greyColor,
-        selectedColor: primaryColor,
+        selectedColor: CustomTheme.violet,
         notchedShape: const CircularNotchedRectangle(),
         onTabSelected: (int index) {
           if (index == 0) {
@@ -91,15 +92,15 @@ class FABBottomAppBar extends StatefulWidget {
     Key? key,
     required this.items,
     required this.centerItemText,
-    this.height: 60.0,
-    this.iconSize: 24.0,
+    this.height = 60.0,
+    this.iconSize = 24.0,
     required this.backgroundColor,
     required this.color,
     required this.selectedColor,
     required this.notchedShape,
     required this.onTabSelected,
   }) : super(key: key) {
-    assert(this.items.length == 2 || this.items.length == 4);
+    assert(items.length == 2 || items.length == 4);
   }
   final List<FABBottomAppBarItem> items;
   final String centerItemText;
@@ -138,12 +139,12 @@ class FABBottomAppBarState extends State<FABBottomAppBar> {
 
     return BottomAppBar(
       shape: widget.notchedShape,
+      color: widget.backgroundColor,
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: items,
       ),
-      color: widget.backgroundColor,
     );
   }
 

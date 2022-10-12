@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pharmabag/const/const.dart';
+import 'package:pharmabag/utils/custom_theme.dart';
 import 'package:pharmabag/view/sellerview/help/help.dart';
 import 'package:pharmabag/view/sellerview/home/components/inventry.dart';
 import 'package:pharmabag/view/sellerview/home/components/overview_card.dart';
@@ -14,16 +15,16 @@ class HomeTab extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
             children: [
               IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Remix.menu_2_line,
-                  color: primaryColor,
+                  color: CustomTheme.violet,
                 ),
               ),
               const Spacer(),
@@ -35,24 +36,24 @@ class HomeTab extends StatelessWidget {
                       },
                     ));
                   },
-                  child: CircleAvatar(
+                  child: const CircleAvatar(
                     backgroundColor: Colors.white,
                     child: Icon(
                       Remix.user_2_fill,
-                      color: primaryColor,
+                      color: CustomTheme.violet,
                     ),
                   )),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Text("Total sales this month",
+          const Text("Total sales this month",
               style: TextStyle(
-                  color: primaryColor,
+                  color: CustomTheme.violet,
                   fontSize: 12,
                   fontWeight: FontWeight.w400)),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Row(
             children: [
               Column(
@@ -104,7 +105,7 @@ class HomeTab extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Wrap(
@@ -136,7 +137,7 @@ class HomeTab extends StatelessWidget {
               OverViewCard(
                   icon: Remix.shopping_bag_2_line,
                   title: "Close to expiry",
-                  color: primaryColor,
+                  color: CustomTheme.violet,
                   value: "7",
                   width: MediaQuery.of(context).size.width / 2 - 30),
             ],
