@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pharmabag/const/const.dart';
+import 'package:pharmabag/view/authenticationview/signup/subscreen/buyer_screen.dart';
+import 'package:pharmabag/view/authenticationview/signup/subscreen/seller_screen.dart';
 import 'package:pharmabag/view/buyerview/home.dart';
-import 'package:pharmabag/view/buyerview/signup/subscreen/seller_screen.dart';
-import 'package:pharmabag/view/buyerview/signup/subscreen/buyer_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
