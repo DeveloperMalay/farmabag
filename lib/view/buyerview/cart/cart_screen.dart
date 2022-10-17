@@ -9,35 +9,24 @@ class CartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 18.0),
-      child: Scaffold(
-        appBar: AppBar(
-          toolbarHeight: 50,
-          backgroundColor: Colors.white,
-          elevation: 1,
-          automaticallyImplyLeading: false,
-          title: const Text(
-            "Your bag",
-            style: TextStyle(
-              color: Color.fromARGB(255, 93, 90, 241),
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-            ),
+    return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        elevation: 1,
+        backgroundColor: Colors.white,
+        title: const Text(
+          "Your Bag",
+          style: TextStyle(
+            color: Color.fromARGB(255, 93, 90, 241),
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
           ),
-          // actions: [
-          //   Padding(
-          //     padding: const EdgeInsets.only(bottom: 14.0),
-          //     child: TextButton(
-          //         onPressed: () {},
-          //         child: const Text(
-          //           'Edit Bag',
-          //           style: TextStyle(color: Colors.black, fontSize: 15),
-          //         )),
-          //   )
-          // ],
         ),
-        body: ListView(scrollDirection: Axis.vertical, children: [
+        centerTitle: true,
+      ),
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        children: [
           Container(
               height: 560,
               width: 200,
@@ -68,8 +57,8 @@ class CartScreen extends StatelessWidget {
               ),
               onPressed: () {},
             ),
-          )
-        ]),
+          ),
+        ],
       ),
     );
   }

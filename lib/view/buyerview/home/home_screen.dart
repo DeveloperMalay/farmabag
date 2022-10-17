@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -5,6 +6,7 @@ import 'package:pharmabag/const/const.dart';
 import 'package:pharmabag/view/buyerview/home/components/allproducts.dart';
 import 'package:pharmabag/view/buyerview/home/components/category.dart';
 import 'package:pharmabag/view/buyerview/home/components/product.dart';
+import 'package:pharmabag/view/buyerview/notification/notification_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -44,23 +46,48 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 130,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: const [
+                      children: [
                         CircleAvatar(
                           radius: 25,
-                          backgroundColor: Color.fromARGB(255, 227, 227, 255),
-                          child: Icon(
-                            Icons.favorite_outline,
-                            size: 30,
-                            color: Color.fromARGB(255, 93, 90, 241),
+                          backgroundColor:
+                              const Color.fromARGB(255, 227, 227, 255),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Badge(
+                              badgeContent: const Text(
+                                '1',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              child: const Icon(
+                                Icons.favorite,
+                                size: 30,
+                                color: Color.fromARGB(255, 93, 90, 241),
+                              ),
+                            ),
                           ),
                         ),
                         CircleAvatar(
                           radius: 25,
-                          backgroundColor: Color.fromARGB(255, 227, 227, 255),
-                          child: Icon(
-                            Icons.notifications_outlined,
-                            size: 30,
-                            color: Color.fromARGB(255, 93, 90, 241),
+                          backgroundColor:
+                              const Color.fromARGB(255, 227, 227, 255),
+                          child: IconButton(
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return const NotificationScreen();
+                              }));
+                            },
+                            icon: Badge(
+                              badgeContent: const Text(
+                                '1',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              child: const Icon(
+                                Icons.notifications,
+                                size: 30,
+                                color: Color.fromARGB(255, 93, 90, 241),
+                              ),
+                            ),
                           ),
                         ),
                       ],

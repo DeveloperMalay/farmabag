@@ -44,7 +44,7 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 150,
+      height: 108,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: categoryDate.length,
@@ -61,8 +61,8 @@ class CategoryCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    height: 90,
-                    width: 90,
+                    height: 70,
+                    width: 70,
                     padding: const EdgeInsets.all(10),
                     margin: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
@@ -72,8 +72,8 @@ class CategoryCard extends StatelessWidget {
                     child: Center(
                       child: Image.network(
                         "${currentItem['imageUrl']}",
-                        height: 50,
-                        width: 50,
+                        height: 30,
+                        width: 30,
                       ),
                     ),
                   ),
